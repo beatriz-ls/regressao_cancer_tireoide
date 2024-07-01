@@ -46,26 +46,24 @@ dt <- dt0 |>
                                                    Response == "Excellent" ~ "Excelente",
                                                    Response == "Structural Incomplete" ~ "Estrutura incompleta",
                                                    TRUE ~ "Bioquimica incompleta")),
-         reocorrencia = as.factor(ifelse(Recurred == "No", "Não", "Sim"))) %>%
+         reocorrencia = as.factor(ifelse(Recurred == "No", "Não", "Sim")),
+         T = factor(case_when(T == "T1a" ~ "T1",
+                              T == "T1b" ~ "T1",
+                              T == "T2" ~ "T2",
+                              T == "T3a" ~ "T3",
+                              T == "T3b" ~ "T3",
+                              T =="T4a" ~ "T4",
+                              T == "T4b" ~ "T4"),
+                    levels = c("T1", "T2", "T3", "T4")),
+         N = factor(case_when(N == "N0" ~ "N0",
+                              N == "N1a" ~ "N1",
+                              N == "N1b" ~ "N1"),
+                    levels = c("N0", "N1"))) %>%
   mutate(faixa_etaria = factor(faixa_etaria,
                                levels = c("Adolescente", "Jovem Adulto", "Adulto", "Idoso")),
          risco = factor(risco, levels = c("Baixo", "Alto")),
-         estagio = factor(Stage, levels = c("I", "II", "III", "IV")))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+         estagio = factor(Stage, levels = c("I", "II", "III", "IV"))) %>%
+  select(-c(Age, Gender, Smoking, `Hx Smoking`, `Thyroid Function`,
+            `Physical Examination`, `Adenopathy`, `Pathology`, `Focality`, `Risk`,
+            `Stage`,`Response`, `Recurred`, `Hx Radiothreapy`))
 
