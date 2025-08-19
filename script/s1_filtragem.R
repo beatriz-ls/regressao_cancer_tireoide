@@ -7,6 +7,8 @@ library(readr)
 
 dt0 <- read_csv("data/Thyroid_Diff.csv")
 
+sum(is.na(dt0))
+
 # Data pre processing
 
 dt <- dt0 |>
@@ -55,6 +57,11 @@ dt <- dt0 |>
                               T =="T4a" ~ "T4",
                               T == "T4b" ~ "T4"),
                     levels = c("T1", "T2", "T3", "T4")),
+
+         M = factor(case_when(M == "M0" ~ "M0",
+                              M == "M1" ~ "M1"),
+                    levels = c("M0", "M1")),
+
          N = factor(case_when(N == "N0" ~ "N0",
                               N == "N1a" ~ "N1",
                               N == "N1b" ~ "N1"),
@@ -62,8 +69,12 @@ dt <- dt0 |>
   mutate(faixa_etaria = factor(faixa_etaria,
                                levels = c("Adolescente", "Jovem Adulto", "Adulto", "Idoso")),
          risco = factor(risco, levels = c("Baixo", "Alto")),
-         estagio = factor(Stage, levels = c("I", "II", "III", "IV"))) %>%
+         estagio = factor(Stage, levels = c("I", "II", "III", "IVA", "IVB"))) %>%
   select(-c(Age, Gender, Smoking, `Hx Smoking`, `Thyroid Function`,
             `Physical Examination`, `Adenopathy`, `Pathology`, `Focality`, `Risk`,
             `Stage`,`Response`, `Recurred`, `Hx Radiothreapy`))
+
+## NA surgem depois do tratamento
+sum(is.na(dt))
+
 
