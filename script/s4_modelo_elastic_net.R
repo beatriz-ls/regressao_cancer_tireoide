@@ -2,7 +2,7 @@ library(dplyr)
 library(glmnet)
 library(logistf)
 library(caret)
-
+library(pROC)
 
 # --- 1. Separar treino e teste ---
 set.seed(123)
@@ -37,7 +37,9 @@ print("Variáveis selecionadas pelo Elastic Net:")
 print(selected_vars)
 
 
-modelo_firth_en <- logistf(
+# --- 5. Modelo Firth para penalização ---
+
+modelo_elastic <- logistf(
   formula = reocorrencia ~ T + N + genero + quadro_tireoide + adenopatia +
     patologia + risco + resposta_tratamento + estagio,
   data = train_data,
@@ -45,12 +47,12 @@ modelo_firth_en <- logistf(
   plcontrol = logistpl.control(maxit = 500))
 
 
-summary(modelo_firth_en)
+summary(modelo_elastic)
 
 # --- 6. Avaliação no treino e teste ---
 # Probabilidades
-train_pred_prob <- predict(modelo_firth_en, type = "response")
-test_pred_prob  <- predict(modelo_firth_en, newdata = test_data, type = "response")
+train_pred_prob <- predict(modelo_elastic, type = "response")
+test_pred_prob  <- predict(modelo_elastic, newdata = test_data, type = "response")
 
 # Predições binárias
 train_pred <- ifelse(train_pred_prob > 0.5, "Sim", "Não")
@@ -64,7 +66,7 @@ print(conf_train)
 print(conf_test)
 
 # Curva ROC
-library(pROC)
+
 roc_train <- roc(train_data$reocorrencia, train_pred_prob, levels = c("Não","Sim"))
 roc_test  <- roc(test_data$reocorrencia, test_pred_prob, levels = c("Não","Sim"))
 

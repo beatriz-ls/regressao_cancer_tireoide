@@ -31,27 +31,24 @@ vars_selected <- vars_selected[vars_selected != "(Intercept)"]
 vars_selected
 
 # --- 4. Ajustar modelo Firth apenas com variáveis selecionadas ---
-formula_firth <- as.formula(
-  paste("reocorrencia ~", paste(vars_selected, collapse = " + "))
-)
 
-modelo_firth_sel <- logistf(
+modelo_lasso <- logistf(
   reocorrencia ~ N + genero + risco + resposta_tratamento + estagio,
   data = train_data,
   control = logistf.control(maxit = 200),
   plcontrol = logistpl.control(maxit = 500)
 )
 
-summary(modelo_firth_sel)
+summary(modelo_lasso)
 
 # --- 5. Avaliar desempenho em treino ---
-train_pred_prob <- predict(modelo_firth_sel, type = "response")
+train_pred_prob <- predict(modelo_lasso, type = "response")
 train_pred <- ifelse(train_pred_prob > 0.5, "Sim", "Não")
 confusionMatrix(factor(train_pred, levels=c("Não","Sim")), train_data$reocorrencia)
 
 # --- 6. Avaliar desempenho em teste ---
 # Precisamos usar a mesma codificação que model.matrix gerou
-test_pred_prob <- predict(modelo_firth_sel, newdata = test_data, type = "response")
+test_pred_prob <- predict(modelo_lasso, newdata = test_data, type = "response")
 test_pred <- ifelse(test_pred_prob > 0.5, "Sim", "Não")
 confusionMatrix(factor(test_pred, levels=c("Não","Sim")), test_data$reocorrencia)
 
