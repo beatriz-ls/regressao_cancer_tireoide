@@ -1,0 +1,21 @@
+##  {#introducao data-menu-title="Introdução"}
+
+[Introdução]{.slide-title}
+
+<hr>
+
+- **Câncer de tireoide**: crescimento anormal das células da tireoide, afeta metabolismo, frequência cardíaca e pressão arterial; é raro, mas o mais comum do sistema endócrino.
+
+- **Estudo**: coorte em Hamadan com 383 pacientes diagnosticados.
+
+- **Dados coletados:**
+
+    - **Perfil pré-doença:** gênero, idade, tabagismo.
+
+    - **Estado da doença:** patologia, foco e tamanho do tumor.
+
+    - **Resposta:** tratamento e recorrência.
+
+- **Análise:** métodos estatísticos para dados categóricos e descrição básica.
+
+- **Objetivo do modelo de regressão:** identificar fatores associados à recorrência em pacientes curados.
