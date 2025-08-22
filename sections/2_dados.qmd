@@ -1,0 +1,156 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: "bea_slide_theme.scss"
+---
+
+
+##  {#dados data-menu-title="Banco de Dados"}
+
+[Banco de dados]{.slide-title}
+
+<hr>
+
+Foi coletado dos 383 individuos, 17 variáviaveis sendo 16 de carater categórico e uma númerica.
+
+::: body-text-s
+
+1. **Faixa Etária (`faixa_etaria`)**  
+   O dado de idade foi registrado pontualmente, mas para fim de organização neste trabalho adotaremos faixas etárias:  
+   - Adolescente: Idade entre 14 e 19 anos.  
+   - Jovem Adulto: Idade entre 20 e 34 anos.  
+   - Adulto: Idade entre 35 e 59 anos.  
+   - Idoso: Idade a partir de 60 anos.  
+   
+2. **Gênero (`genero`)**  
+   Gênero do paciente:  
+   - Mulher: Pacientes do sexo feminino.  
+   - Homem: Pacientes do sexo masculino.
+   
+3. **Fumante (`fumante`)**  
+   Se o paciente é fumante no momento do diagnóstico (não inclui ex-fumantes):  
+   - Não: Pacientes que não fumam.  
+   - Sim: Pacientes que fumam.
+   
+4. **Histórico de Fumo (`historico_fumante`)**  
+   Se o paciente já foi fumante por um período longo (inclui fumantes atuais e ex-fumantes):  
+   - Não: Pacientes sem histórico de tabagismo.  
+   - Sim: Pacientes com histórico de tabagismo.
+
+:::
+   
+##  {#dados1 data-menu-title="Banco de Dados"}
+
+[Banco de dados]{.slide-title}
+
+<hr>
+
+::: body-text-s
+
+5. **Histórico de Radioterapia (`historico_radioterapia`)**  
+   Se a pessoa já fez tratamento de radioterapia:  
+   - Não: Pacientes sem histórico de radioterapia.  
+   - Sim: Pacientes com histórico de radioterapia.
+
+6. **Função da Glândula Tireoide (`quadro_tireoide`)**  
+   Estado da função da tireoide:  
+   - Eutireoide: Função normal.  
+   - Hipertireoidismo Clínico.  
+   - Hipotireoidismo Clínico.  
+   - Hipertireoidismo Subclínico.  
+   - Hipotireoidismo Subclínico.  
+
+7. **Risco (`risco`)**  
+   Classificação de risco de progressão ou recidiva com base em exames médicos:  
+   - Baixo.  
+   - Alto.  
+
+8. **Exame Físico (`exame_fisico`)**  
+   Presença de bócio (aumento anormal da tireoide):  
+   - Bócio nodular único à esquerda.  
+   - Bócio nodular único à direita.  
+   - Bócio multinodular.  
+   - Bócio difuso.
+   
+:::
+
+##  {#dados2 data-menu-title="Banco de Dados"}
+
+[Banco de dados]{.slide-title}
+
+<hr>
+
+::: body-text-s
+
+9. **Adenopatia (`adenopatia`)**  
+   Aumento dos gânglios linfáticos (pode indicar metástase linfática):  
+   - Não: Sem adenopatia.  
+   - Direita.  
+   - Extensivo.  
+   - Esquerda.  
+   - Bilateral.  
+   - Posterior.  
+
+10. **Patologia (`patologia`)**  
+    Tipo de câncer:  
+    - Micropapilar.  
+    - Papilar.  
+    - Folicular.  
+    - Células de Hurthle.  
+
+11. **Foco (`foco`)**  
+    Quantidade de tumores:  
+    - Unifocal: Tumor único.  
+    - Multifocal: Múltiplos tumores.
+    
+
+12. **T – Tamanho do Tumor Primário (`T`)**  
+    - TX: Não pode ser avaliado.  
+    - T0: Sem evidência de tumor primário.  
+    - T1, T2, T3, T4: Indicadores de tamanho/extensão.  
+
+:::
+
+##  {#dados3 data-menu-title="Banco de Dados"}
+
+[Banco de dados]{.slide-title}
+
+<hr>
+
+::: body-text-s
+
+13. **N – Envolvimento dos Linfonodos Regionais (`N`)**  
+    - NX: Não pode ser avaliado.  
+    - N1, N2, N3: Grau de envolvimento (N1 menos extenso, N3 mais extenso).  
+
+14. **M – Metástases à Distância (`M`)**  
+    - MX: Não pode ser avaliado.  
+    - M0: Sem metástases.  
+    - M1: Com metástases.  
+
+15. **Estágio (`estagio`)**  
+    Extensão do câncer (definido pelo sistema TNM):  
+    - I  
+    - II  
+    - III  
+    - IV
+
+16. **Resposta ao Tratamento (`resposta_tratamento`)**  
+    Avaliação da resposta terapêutica:  
+    - Indeterminado.  
+    - Excelente.  
+    - Estrutura incompleta.  
+    - Bioquímica incompleta.  
+
+17. **Recorrência (`recorrencia`)**  
+    Se houve nova ocorrência do câncer:  
+    - Não.  
+    - Sim.  
+    
+:::

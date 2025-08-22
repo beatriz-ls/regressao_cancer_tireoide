@@ -1,0 +1,347 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: "bea_slide_theme.scss"
+---
+
+##  {#descricao data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e grupo de risco]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Testes de Indepedência
+
+:::
+
+:::
+
+
+```{r, echo=FALSE, include= TRUE}
+
+library(knitr)
+library(kableExtra)
+
+# Supondo que sua tabela esteja em um data.frame chamado df
+df <- data.frame(
+  Caracteristica = c("faixa_etaria", "  Adolescente", "  Jovem Adulto", "  Adulto", "  Idoso",
+                     "genero", "  Homem", "  Mulher",
+                     "fumante", "  Não", "  Sim",
+                     "historico_fumante", "  Não", "  Sim",
+                     "historico_radioterapia", "  Não", "  Sim",
+                     "quadro_tireoide", "  Eutireoide", "  Hipertireoidismo Clínico",
+                     "  Hipertireoidismo Subclínico", "  Hipotireoidismo Clínico",
+                     "  Hipotireoidismo Subclínico"),
+  Baixo = c("", "3 (1.2%)", "115 (46%)", "108 (43%)", "23 (9.2%)",
+            "", "27 (11%)", "222 (89%)",
+            "", "234 (94%)", "15 (6.0%)",
+            "", "235 (94%)", "14 (5.6%)",
+            "", "248 (100%)", "1 (0.4%)",
+            "", "216 (87%)", "14 (5.6%)", "5 (2.0%)", "9 (3.6%)", "5 (2.0%)"),
+  Alto = c("", "4 (3.0%)", "42 (31%)", "53 (40%)", "35 (26%)",
+           "", "44 (33%)", "90 (67%)",
+           "", "100 (75%)", "34 (25%)",
+           "", "120 (90%)", "14 (10%)",
+           "", "128 (96%)", "6 (4.5%)",
+           "", "116 (87%)", "6 (4.5%)", "0 (0%)", "3 (2.2%)", "9 (6.7%)"),
+  p_value = c("<0.001", "", "", "", "",
+              "<0.001", "", "",
+              "<0.001", "", "",
+              "<0.13", "", "",
+              "<0.008", "", "",
+              "<0.079", "", "", "", "", "")
+)
+
+
+# Dividindo os dados
+df1 <- df[1:11, ]   # até fumante
+df2 <- df[12:nrow(df), ]  # histórico e quadro_tireoide
+
+# Criando as tabelas
+tab1 <- kable(df1, "html", align = c("l","r","r","r")) %>%
+  kable_styling(full_width = F, font_size = 13) %>%
+  row_spec(0:nrow(df1), extra_css = "font-size:15px;")
+
+tab2 <- kable(df2, "html", align = c("l","r","r","r")) %>%
+  kable_styling(full_width = F, font_size = 13) %>%
+  row_spec(0:nrow(df2), extra_css = "font-size:15px;")
+
+# Exibindo lado a lado
+htmltools::browsable(
+  htmltools::tags$div(
+    style = "display:flex; gap:20px;",  # espaço entre as tabelas
+    htmltools::HTML(tab1),
+    htmltools::HTML(tab2)
+  )
+)
+
+```
+
+
+##  {#descricao1 data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e grupo de risco]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Medidas de Associação
+
+:::
+
+:::
+
+
+```{r, echo=FALSE, include= TRUE}
+# Tabela 1: Níveis de Medidas de Associação
+medidas <- data.frame(
+  Medida = c("Coeficiente Phi", "Coeficiente de Contingência", "V de Cramer"),
+  Niveis = c(
+    "0 : <span style='color:yellow'>Nenhuma</span><br>
+     0.1 - 0.3 : <span style='color:blue'>Fraca</span><br>
+     0.3 - 0.5 : <span style='color:green'>Moderada</span><br>
+     > 0.5 : <span style='color:red'>Forte</span>",
+    
+    "0 : Nenhuma<br>
+     0.1 - 0.2 : <span style='color:blue'>Fraca</span><br>
+     0.2 - 0.4 : <span style='color:green'>Moderada</span><br>
+     > 0.4 : <span style='color:red'>Forte</span>",
+    
+    "0 : Nenhuma<br>
+     0.1 - 0.2 : <span style='color:blue'>Fraca</span><br>
+     0.2 - 0.4 : <span style='color:green'>Moderada</span><br>
+     > 0.4 : <span style='color:red'>Forte</span>"
+  )
+)
+
+kable(medidas, "html", escape = FALSE, align = c("l","l")) %>%
+  kable_styling(full_width = F) %>%
+  row_spec(0:nrow(medidas), extra_css = "font-size:13px;")
+
+```
+
+```{r, echo=FALSE, include= TRUE}
+
+# Tabela 2: Medidas de Associação com o Risco
+associacao <- data.frame(
+  Variavel = c("faixa_etaria","gênero","fumante","histórico_radioterapia"),
+  Coef_Phi = c("Não aplicável","<span style='color:blue'>Fraca</span>",
+               "<span style='color:blue'>Fraca</span>","<span style='color:blue'>Fraca</span>"),
+  Coef_Contingencia = c("<span style='color:blue'>Fraca</span>","<span style='color:blue'>Fraca</span>",
+                        "<span style='color:blue'>Fraca</span>","<span style='color:blue'>Fraca</span>"),
+  V_Cramer = c("<span style='color:green'>Moderada</span>","<span style='color:blue'>Fraca</span>",
+               "<span style='color:blue'>Fraca</span>","<span style='color:blue'>Fraca</span>")
+)
+
+kable(associacao, "html", escape = FALSE, align = c("l","c","c","c")) %>%
+    kable_styling(full_width = F) %>%
+  row_spec(0:nrow(associacao), extra_css = "font-size:15px;")
+
+```
+
+
+##  {#descricao2 data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e histórico médico com incidência de reocorência]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Distribuição das características de perfil pré diagnótico por reocorrência
+
+:::
+
+:::
+
+![](plot/bloco1_barras.png)
+
+##  {#descricao3 data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e histórico médico com incidência de reocorência]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Distribuição de caracteristicas clínicas por reocorrência
+
+:::
+
+:::
+
+![](plot/bloco2_barras.png)
+
+##  {#descricao4 data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e histórico médico com incidência de reocorência]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Distribuição de patologia para reocorrência
+
+:::
+
+:::
+
+![](plot/bloco3_patologia_mosaico.png)
+
+##  {#descricao5 data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e histórico médico com incidência de reocorência]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Distribuição de estagio por reocorrência
+
+:::
+
+:::
+
+![](plot/bloco3_estagio_mosaico.png)
+
+##  {#descricao6 data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e histórico médico com incidência de reocorência]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Distribuição de histórico de radioterapia por reocorrência
+
+:::
+
+:::
+
+![](plot/bloco3_radioterapia_mosaico.png)
+
+##  {#descricao7 data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e histórico médico com incidência de reocorência]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Distribuição de reocorrênica para as demais váriaveis
+
+:::
+
+:::
+
+![](plot/bloco4_barras.png)
+
+
+##  {#descricao8 data-menu-title="Descrição da Coorte"}
+
+[Descrição da Coorte]{.slide-title}
+
+[Perfil pré diagnóstico e histórico médico com incidência de reocorência]{.custom-subtitle2}
+
+<hr>
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Medidas de associação
+
+:::
+
+:::
+
+
+```{r, echo=FALSE, include= TRUE}
+
+# Criando o data.frame
+reocorrencia <- data.frame(
+  Variavel = c(
+    "faixa_etaria","genero","fumante","historico_fumante",
+    "historico_radioterapia","quadro_tireoide","exame_fisico",
+    "adenopatia","estagio","patologia","foco","risco",
+    "resposta_tratamento","T","N","M"
+  ),
+  Coef_Phi = c(
+    "Não aplicável","<span style='color:red'>Forte</span>",
+    "<span style='color:red'>Forte</span>","<span style='color:blue'>Fraca</span>",
+    "<span style='color:blue'>Fraca</span>","Não aplicável","Não aplicável",
+    "Não aplicável","Não aplicável","Não aplicável",
+    "<span style='color:green'>Moderada</span>","<span style='color:red'>Forte</span>",
+    "Não aplicável","Não aplicável","<span style='color:red'>Forte</span>",
+    "<span style='color:green'>Moderada</span>"
+  ),
+  Coef_Contingencia = c(
+    "<span style='color:green'>Moderada</span>","<span style='color:green'>Moderada</span>",
+    "<span style='color:red'>Forte</span>","<span style='color:blue'>Fraca</span>",
+    "<span style='color:blue'>Fraca</span>","<span style='color:yellow'>Nenhuma</span>","<span style='color:blue'>Fraca</span>",
+    "<span style='color:red'>Forte</span>","<span style='color:yellow'>Nenhuma</span>","<span style='color:green'>Moderada</span>",
+    "<span style='color:green'>Moderada</span>","<span style='color:red'>Forte</span>",
+    "<span style='color:red'>Forte</span>","<span style='color:green'>Moderada</span>","<span style='color:green'>Moderada</span>",
+    "<span style='color:green'>Moderada</span>"
+  ),
+  V_Cramer = c(
+    "<span style='color:green'>Moderada</span>","<span style='color:red'>Forte</span>",
+    "<span style='color:red'>Forte</span>","<span style='color:blue'>Fraca</span>",
+    "<span style='color:yellow'>Fraca</span>","<span style='color:yellow'>Nenhuma</span>","<span style='color:blue'>Fraca</span>",
+    "<span style='color:red'>Forte</span>","<span style='color:yellow'>Nenhuma</span>","<span style='color:green'>Moderada</span>",
+    "<span style='color:green'>Moderada</span>","<span style='color:red'>Forte</span>",
+    "<span style='color:red'>Forte</span>","<span style='color:green'>Moderada</span>","<span style='color:red'>Forte</span>",
+    "<span style='color:green'>Moderada</span>"
+  )
+)
+
+# Criando a tabela HTML com kableExtra
+kable(reocorrencia, "html", escape = FALSE, align = c("l","c","c","c"), caption = "") %>%
+  kable_styling(full_width = F) %>%
+  row_spec(0:nrow(reocorrencia), extra_css = "font-size:13px;")
+
+
+```
+
+

@@ -44,3 +44,20 @@ Slides disponíveis em [GitHub](https://github.com/beatriz-ls/regressao_cancer_t
 
 {{< include sections/1_introducao.qmd >}}
 
+------------------------------------------------------------------------
+
+{{< include sections/2_dados.qmd >}}
+
+------------------------------------------------------------------------
+
+{{< include sections/3_descricao.qmd >}}
+
+------------------------------------------------------------------------
+
+{{< include sections/4_modelo.qmd >}}
+
+------------------------------------------------------------------------
+
+{{< include sections/5_resultados.qmd >}}
+
+

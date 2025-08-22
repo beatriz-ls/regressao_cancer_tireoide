@@ -1,0 +1,19 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: "bea_slide_theme.scss"
+---
+
+##  {#tabela_odds data-menu-title="Resultados"}
+
+[Resultados]{.slide-title}
+
+
+<hr>
+

@@ -6,16 +6,16 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
-
-  <title>index</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
-  <style>
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-b6e6edf6cb1293d7f667c2f39c143ab5.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+<title>index</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+<style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -28,12 +28,14 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-25435bd8fb1982f8305b419e758b8ee7.css">
-  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+<link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-a631821d17cc7b3336b07721a472b563.css">
+<link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+<link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+<link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -120,20 +122,20 @@
       margin-right: 0; 
     }
   </style>
+<script src="index_files/libs/kePrint-0.0.1/kePrint.js"></script><link href="index_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 
-<section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#75070c">
-<h2></h2>
+<section id="title-slide" class="slide level2 center" data-menu-title="Title Slide" data-background="#75070c"><h2></h2>
 <p><span class="custom-title">Análise de Casos de Câncer de Tireoide</span></p>
 <p><span class="custom-subtitle"><em>Um Estudo de Coorte Retrospectivo</em></span></p>
 <hr style="border: 1px solid #4F6815;">
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><span class="custom-subtitle3">Beatriz Lima Silveira</span><br> <span class="custom-subtitle3">Esley Caminhas Ferreira</span><br></p>
+<p><span class="custom-subtitle3">Beatriz Lima Silveira</span><br><span class="custom-subtitle3">Esley Caminhas Ferreira</span><br></p>
 </div><div class="column" style="width:50%;">
 <p><span class="custom-subtitle3">Universidade Federal do Espírito Santo</span><br></p>
 </div></div>
@@ -141,9 +143,7 @@
 <div class="title-footer">
 <p>Slides disponíveis em <a href="https://github.com/beatriz-ls/regressao_cancer_tireoide">GitHub</a></p>
 </div>
-</section>
-<section id="topicos" class="slide level2" data-menu-title="Tópicos">
-<h2></h2>
+</section><section id="topicos" class="slide level2" data-menu-title="Tópicos"><h2></h2>
 <p><span class="slide-title">Tópicos</span></p>
 <hr>
 <div class="body-text-m">
@@ -156,49 +156,788 @@
 <li>Conclusões</li>
 </ul>
 </div>
-</section>
-<section id="introducao" class="slide level2" data-menu-title="Introdução">
-<h2></h2>
+</section><section id="introducao" class="slide level2" data-menu-title="Introdução"><h2></h2>
 <p><span class="slide-title">Introdução</span></p>
 <hr>
 <ul>
-<li><p>Câncer de tireoide: crescimento anormal das células da tireoide, afeta metabolismo, frequência cardíaca e pressão arterial; é raro, mas o mais comum do sistema endócrino.</p></li>
-<li><p>Estudo: coorte em Hamadan com 383 pacientes diagnosticados.</p></li>
-<li><p>Dados coletados:</p>
+<li><p><strong>Câncer de tireoide</strong>: crescimento anormal das células da tireoide, afeta metabolismo, frequência cardíaca e pressão arterial; é raro, mas o mais comum do sistema endócrino.</p></li>
+<li><p><strong>Estudo</strong>: coorte em Hamadan com 383 pacientes diagnosticados.</p></li>
+<li>
+<p><strong>Dados coletados:</strong></p>
 <ul>
-<li><p>Perfil pré-doença: gênero, idade, tabagismo.</p></li>
-<li><p>Estado da doença: patologia, foco e tamanho do tumor.</p></li>
-<li><p>Resposta: tratamento e recorrência.</p></li>
-</ul></li>
-<li><p>Análise: métodos estatísticos para dados categóricos e descrição básica.</p></li>
-<li><p>Objetivo do modelo de regressão: identificar fatores associados à recorrência em pacientes curados.</p></li>
+<li><p><strong>Perfil pré-doença:</strong> gênero, idade, tabagismo.</p></li>
+<li><p><strong>Estado da doença:</strong> patologia, foco e tamanho do tumor.</p></li>
+<li><p><strong>Resposta:</strong> tratamento e recorrência.</p></li>
 </ul>
+</li>
+<li><p><strong>Análise:</strong> métodos estatísticos para dados categóricos e descrição básica.</p></li>
+<li><p><strong>Objetivo do modelo de regressão:</strong> identificar fatores associados à recorrência em pacientes curados.</p></li>
+</ul></section><section id="dados" class="slide level2" data-menu-title="Banco de Dados"><h2></h2>
+<p><span class="slide-title">Banco de dados</span></p>
+<hr>
+<p>Foi coletado dos 383 individuos, 17 variáviaveis sendo 16 de carater categórico e uma númerica.</p>
+<div class="body-text-s">
+<ol type="1">
+<li>
+<strong>Faixa Etária (<code>faixa_etaria</code>)</strong><br>
+O dado de idade foi registrado pontualmente, mas para fim de organização neste trabalho adotaremos faixas etárias:
+<ul>
+<li>Adolescente: Idade entre 14 e 19 anos.<br>
+</li>
+<li>Jovem Adulto: Idade entre 20 e 34 anos.<br>
+</li>
+<li>Adulto: Idade entre 35 e 59 anos.<br>
+</li>
+<li>Idoso: Idade a partir de 60 anos.</li>
+</ul>
+</li>
+<li>
+<strong>Gênero (<code>genero</code>)</strong><br>
+Gênero do paciente:
+<ul>
+<li>Mulher: Pacientes do sexo feminino.<br>
+</li>
+<li>Homem: Pacientes do sexo masculino.</li>
+</ul>
+</li>
+<li>
+<strong>Fumante (<code>fumante</code>)</strong><br>
+Se o paciente é fumante no momento do diagnóstico (não inclui ex-fumantes):
+<ul>
+<li>Não: Pacientes que não fumam.<br>
+</li>
+<li>Sim: Pacientes que fumam.</li>
+</ul>
+</li>
+<li>
+<strong>Histórico de Fumo (<code>historico_fumante</code>)</strong><br>
+Se o paciente já foi fumante por um período longo (inclui fumantes atuais e ex-fumantes):
+<ul>
+<li>Não: Pacientes sem histórico de tabagismo.<br>
+</li>
+<li>Sim: Pacientes com histórico de tabagismo.</li>
+</ul>
+</li>
+</ol>
+</div>
+</section><section id="dados1" class="slide level2" data-menu-title="Banco de Dados"><h2></h2>
+<p><span class="slide-title">Banco de dados</span></p>
+<hr>
+<div class="body-text-s">
+<ol start="5" type="1">
+<li>
+<strong>Histórico de Radioterapia (<code>historico_radioterapia</code>)</strong><br>
+Se a pessoa já fez tratamento de radioterapia:
+<ul>
+<li>Não: Pacientes sem histórico de radioterapia.<br>
+</li>
+<li>Sim: Pacientes com histórico de radioterapia.</li>
+</ul>
+</li>
+<li>
+<strong>Função da Glândula Tireoide (<code>quadro_tireoide</code>)</strong><br>
+Estado da função da tireoide:
+<ul>
+<li>Eutireoide: Função normal.<br>
+</li>
+<li>Hipertireoidismo Clínico.<br>
+</li>
+<li>Hipotireoidismo Clínico.<br>
+</li>
+<li>Hipertireoidismo Subclínico.<br>
+</li>
+<li>Hipotireoidismo Subclínico.</li>
+</ul>
+</li>
+<li>
+<strong>Risco (<code>risco</code>)</strong><br>
+Classificação de risco de progressão ou recidiva com base em exames médicos:
+<ul>
+<li>Baixo.<br>
+</li>
+<li>Alto.</li>
+</ul>
+</li>
+<li>
+<strong>Exame Físico (<code>exame_fisico</code>)</strong><br>
+Presença de bócio (aumento anormal da tireoide):
+<ul>
+<li>Bócio nodular único à esquerda.<br>
+</li>
+<li>Bócio nodular único à direita.<br>
+</li>
+<li>Bócio multinodular.<br>
+</li>
+<li>Bócio difuso.</li>
+</ul>
+</li>
+</ol>
+</div>
+</section><section id="dados2" class="slide level2" data-menu-title="Banco de Dados"><h2></h2>
+<p><span class="slide-title">Banco de dados</span></p>
+<hr>
+<div class="body-text-s">
+<ol start="9" type="1">
+<li>
+<strong>Adenopatia (<code>adenopatia</code>)</strong><br>
+Aumento dos gânglios linfáticos (pode indicar metástase linfática):
+<ul>
+<li>Não: Sem adenopatia.<br>
+</li>
+<li>Direita.<br>
+</li>
+<li>Extensivo.<br>
+</li>
+<li>Esquerda.<br>
+</li>
+<li>Bilateral.<br>
+</li>
+<li>Posterior.</li>
+</ul>
+</li>
+<li>
+<strong>Patologia (<code>patologia</code>)</strong><br>
+Tipo de câncer:
+<ul>
+<li>Micropapilar.<br>
+</li>
+<li>Papilar.<br>
+</li>
+<li>Folicular.<br>
+</li>
+<li>Células de Hurthle.</li>
+</ul>
+</li>
+<li>
+<strong>Foco (<code>foco</code>)</strong><br>
+Quantidade de tumores:
+<ul>
+<li>Unifocal: Tumor único.<br>
+</li>
+<li>Multifocal: Múltiplos tumores.</li>
+</ul>
+</li>
+<li>
+<strong>T – Tamanho do Tumor Primário (<code>T</code>)</strong>
+<ul>
+<li>TX: Não pode ser avaliado.<br>
+</li>
+<li>T0: Sem evidência de tumor primário.<br>
+</li>
+<li>T1, T2, T3, T4: Indicadores de tamanho/extensão.</li>
+</ul>
+</li>
+</ol>
+</div>
+</section><section id="dados3" class="slide level2" data-menu-title="Banco de Dados"><h2></h2>
+<p><span class="slide-title">Banco de dados</span></p>
+<hr>
+<div class="body-text-s">
+<ol start="13" type="1">
+<li>
+<strong>N – Envolvimento dos Linfonodos Regionais (<code>N</code>)</strong>
+<ul>
+<li>NX: Não pode ser avaliado.<br>
+</li>
+<li>N1, N2, N3: Grau de envolvimento (N1 menos extenso, N3 mais extenso).</li>
+</ul>
+</li>
+<li>
+<strong>M – Metástases à Distância (<code>M</code>)</strong>
+<ul>
+<li>MX: Não pode ser avaliado.<br>
+</li>
+<li>M0: Sem metástases.<br>
+</li>
+<li>M1: Com metástases.</li>
+</ul>
+</li>
+<li>
+<strong>Estágio (<code>estagio</code>)</strong><br>
+Extensão do câncer (definido pelo sistema TNM):
+<ul>
+<li>I<br>
+</li>
+<li>II<br>
+</li>
+<li>III<br>
+</li>
+<li>IV</li>
+</ul>
+</li>
+<li>
+<strong>Resposta ao Tratamento (<code>resposta_tratamento</code>)</strong><br>
+Avaliação da resposta terapêutica:
+<ul>
+<li>Indeterminado.<br>
+</li>
+<li>Excelente.<br>
+</li>
+<li>Estrutura incompleta.<br>
+</li>
+<li>Bioquímica incompleta.</li>
+</ul>
+</li>
+<li>
+<strong>Recorrência (<code>recorrencia</code>)</strong><br>
+Se houve nova ocorrência do câncer:
+<ul>
+<li>Não.<br>
+</li>
+<li>Sim.</li>
+</ul>
+</li>
+</ol>
+</div>
+</section><section id="descricao" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e grupo de risco</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Testes de Indepedência</p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div style="display:flex; gap:20px;">
+
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-size: 15px;">Caracteristica</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-size: 15px;">Baixo</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-size: 15px;">Alto</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-size: 15px;">p_value</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">faixa_etaria</td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">Adolescente</td>
+<td style="text-align: right; font-size: 15px;">3 (1.2%)</td>
+<td style="text-align: right; font-size: 15px;">4 (3.0%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">Jovem Adulto</td>
+<td style="text-align: right; font-size: 15px;">115 (46%)</td>
+<td style="text-align: right; font-size: 15px;">42 (31%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">Adulto</td>
+<td style="text-align: right; font-size: 15px;">108 (43%)</td>
+<td style="text-align: right; font-size: 15px;">53 (40%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">Idoso</td>
+<td style="text-align: right; font-size: 15px;">23 (9.2%)</td>
+<td style="text-align: right; font-size: 15px;">35 (26%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">genero</td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;">&lt;0.001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">Homem</td>
+<td style="text-align: right; font-size: 15px;">27 (11%)</td>
+<td style="text-align: right; font-size: 15px;">44 (33%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">Mulher</td>
+<td style="text-align: right; font-size: 15px;">222 (89%)</td>
+<td style="text-align: right; font-size: 15px;">90 (67%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">fumante</td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">Não</td>
+<td style="text-align: right; font-size: 15px;">234 (94%)</td>
+<td style="text-align: right; font-size: 15px;">100 (75%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">Sim</td>
+<td style="text-align: right; font-size: 15px;">15 (6.0%)</td>
+<td style="text-align: right; font-size: 15px;">34 (25%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+</tbody>
+</table>
+<table class="table caption-top" data-quarto-postprocess="true" style="font-size: 13px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-size: 15px;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-size: 15px;">Caracteristica</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-size: 15px;">Baixo</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-size: 15px;">Alto</th>
+<th data-quarto-table-cell-role="th" style="text-align: right; font-size: 15px;">p_value</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">12</td>
+<td style="text-align: left; font-size: 15px;">historico_fumante</td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;">&lt;0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">13</td>
+<td style="text-align: left; font-size: 15px;">Não</td>
+<td style="text-align: right; font-size: 15px;">235 (94%)</td>
+<td style="text-align: right; font-size: 15px;">120 (90%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">14</td>
+<td style="text-align: left; font-size: 15px;">Sim</td>
+<td style="text-align: right; font-size: 15px;">14 (5.6%)</td>
+<td style="text-align: right; font-size: 15px;">14 (10%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">15</td>
+<td style="text-align: left; font-size: 15px;">historico_radioterapia</td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;">&lt;0.008</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">16</td>
+<td style="text-align: left; font-size: 15px;">Não</td>
+<td style="text-align: right; font-size: 15px;">248 (100%)</td>
+<td style="text-align: right; font-size: 15px;">128 (96%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">17</td>
+<td style="text-align: left; font-size: 15px;">Sim</td>
+<td style="text-align: right; font-size: 15px;">1 (0.4%)</td>
+<td style="text-align: right; font-size: 15px;">6 (4.5%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">18</td>
+<td style="text-align: left; font-size: 15px;">quadro_tireoide</td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;"></td>
+<td style="text-align: right; font-size: 15px;">&lt;0.079</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">19</td>
+<td style="text-align: left; font-size: 15px;">Eutireoide</td>
+<td style="text-align: right; font-size: 15px;">216 (87%)</td>
+<td style="text-align: right; font-size: 15px;">116 (87%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">20</td>
+<td style="text-align: left; font-size: 15px;">Hipertireoidismo Clínico</td>
+<td style="text-align: right; font-size: 15px;">14 (5.6%)</td>
+<td style="text-align: right; font-size: 15px;">6 (4.5%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">21</td>
+<td style="text-align: left; font-size: 15px;">Hipertireoidismo Subclínico</td>
+<td style="text-align: right; font-size: 15px;">5 (2.0%)</td>
+<td style="text-align: right; font-size: 15px;">0 (0%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">22</td>
+<td style="text-align: left; font-size: 15px;">Hipotireoidismo Clínico</td>
+<td style="text-align: right; font-size: 15px;">9 (3.6%)</td>
+<td style="text-align: right; font-size: 15px;">3 (2.2%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">23</td>
+<td style="text-align: left; font-size: 15px;">Hipotireoidismo Subclínico</td>
+<td style="text-align: right; font-size: 15px;">5 (2.0%)</td>
+<td style="text-align: right; font-size: 15px;">9 (6.7%)</td>
+<td style="text-align: right; font-size: 15px;"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section><section id="descricao1" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e grupo de risco</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Medidas de Associação</p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead><tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-size: 13px;">Medida</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-size: 13px;">Niveis</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">Coeficiente Phi</td>
+<td style="text-align: left; font-size: 13px;">0 : <span style="color:yellow">Nenhuma</span><br>
+0.1 - 0.3 : <span style="color:blue">Fraca</span><br>
+0.3 - 0.5 : <span style="color:green">Moderada</span><br>
+&gt; 0.5 : <span style="color:red">Forte</span>
+</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">Coeficiente de Contingência</td>
+<td style="text-align: left; font-size: 13px;">0 : Nenhuma<br>
+0.1 - 0.2 : <span style="color:blue">Fraca</span><br>
+0.2 - 0.4 : <span style="color:green">Moderada</span><br>
+&gt; 0.4 : <span style="color:red">Forte</span>
+</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">V de Cramer</td>
+<td style="text-align: left; font-size: 13px;">0 : Nenhuma<br>
+0.1 - 0.2 : <span style="color:blue">Fraca</span><br>
+0.2 - 0.4 : <span style="color:green">Moderada</span><br>
+&gt; 0.4 : <span style="color:red">Forte</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-size: 15px;">Variavel</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-size: 15px;">Coef_Phi</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-size: 15px;">Coef_Contingencia</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-size: 15px;">V_Cramer</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">faixa_etaria</td>
+<td style="text-align: center; font-size: 15px;">Não aplicável</td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 15px;"><span style="color:green">Moderada</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">gênero</td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 15px;">fumante</td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 15px;">histórico_radioterapia</td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 15px;"><span style="color:blue">Fraca</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="descricao2" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e histórico médico com incidência de reocorência</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Distribuição das características de perfil pré diagnótico por reocorrência</p>
+</div>
+</div>
+
+<img data-src="plot/bloco1_barras.png" class="r-stretch"></section><section id="descricao3" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e histórico médico com incidência de reocorência</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Distribuição de caracteristicas clínicas por reocorrência</p>
+</div>
+</div>
+
+<img data-src="plot/bloco2_barras.png" class="r-stretch"></section><section id="descricao4" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e histórico médico com incidência de reocorência</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Distribuição de patologia para reocorrência</p>
+</div>
+</div>
+
+<img data-src="plot/bloco3_patologia_mosaico.png" class="r-stretch"></section><section id="descricao5" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e histórico médico com incidência de reocorência</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Distribuição de estagio por reocorrência</p>
+</div>
+</div>
+
+<img data-src="plot/bloco3_estagio_mosaico.png" class="r-stretch"></section><section id="descricao6" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e histórico médico com incidência de reocorência</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Distribuição de histórico de radioterapia por reocorrência</p>
+</div>
+</div>
+
+<img data-src="plot/bloco3_radioterapia_mosaico.png" class="r-stretch"></section><section id="descricao7" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e histórico médico com incidência de reocorência</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Distribuição de reocorrênica para as demais váriaveis</p>
+</div>
+</div>
+
+<img data-src="plot/bloco4_barras.png" class="r-stretch"></section><section id="descricao8" class="slide level2" data-menu-title="Descrição da Coorte"><h2></h2>
+<p><span class="slide-title">Descrição da Coorte</span></p>
+<p><span class="custom-subtitle2">Perfil pré diagnóstico e histórico médico com incidência de reocorência</span></p>
+<hr>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Medidas de associação</p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-size: 13px;">Variavel</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-size: 13px;">Coef_Phi</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-size: 13px;">Coef_Contingencia</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-size: 13px;">V_Cramer</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">faixa_etaria</td>
+<td style="text-align: center; font-size: 13px;">Não aplicável</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">genero</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">fumante</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">historico_fumante</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:blue">Fraca</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">historico_radioterapia</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:yellow">Fraca</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">quadro_tireoide</td>
+<td style="text-align: center; font-size: 13px;">Não aplicável</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:yellow">Nenhuma</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:yellow">Nenhuma</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">exame_fisico</td>
+<td style="text-align: center; font-size: 13px;">Não aplicável</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:blue">Fraca</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:blue">Fraca</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">adenopatia</td>
+<td style="text-align: center; font-size: 13px;">Não aplicável</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">estagio</td>
+<td style="text-align: center; font-size: 13px;">Não aplicável</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:yellow">Nenhuma</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:yellow">Nenhuma</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">patologia</td>
+<td style="text-align: center; font-size: 13px;">Não aplicável</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">foco</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">risco</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">resposta_tratamento</td>
+<td style="text-align: center; font-size: 13px;">Não aplicável</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">T</td>
+<td style="text-align: center; font-size: 13px;">Não aplicável</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; font-size: 13px;">N</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:red">Forte</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; font-size: 13px;">M</td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+<td style="text-align: center; font-size: 13px;"><span style="color:green">Moderada</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="modelo" class="slide level2" data-menu-title="Modelo Logístico"><h2></h2>
+<p><span class="slide-title">Modelo Logístico</span></p>
+<p><span class="custom-subtitle2">Definição</span></p>
+<hr>
+<div class="body-text-s">
+<p>A fórmula geral do modelo logístico é:</p>
+<p><span class="math display">\[
+\text{logit}\big(P(Y=1 \mid X_1, X_2, \dots, X_k)\big) = \ln\frac{P(Y=1 \mid X_1, \dots, X_k)}{1 - P(Y=1 \mid X_1, \dots, X_k)} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_k X_k
+\]</span></p>
+<p>Onde:</p>
+<ul>
+<li><p><span class="math inline">\(P(Y=1 \mid X_1, X_2, \dots, X_k)\)</span> é a <strong>probabilidade de ocorrência do evento</strong> (Y = 1) dado os preditores <span class="math inline">\(X_1, X_2, \dots, X_k\)</span>;</p></li>
+<li><p><span class="math inline">\(beta_0\)</span> é o intercepto do modelo;</p></li>
+<li><p><span class="math inline">\(beta_1, \dots, \beta_k\)</span> são os coeficientes associados aos preditores <span class="math inline">\(X_1, \dots, X_k\)</span>.</p></li>
+</ul>
+</div>
+</section><section id="modelo1" class="slide level2" data-menu-title="Regularização: Lasso"><h2></h2>
+<p><span class="slide-title">Regularização Lasso</span></p>
+<p><span class="custom-subtitle2">Seleção de variáveis</span></p>
+<hr>
+<div class="body-text-s">
+<p>Quando a variável resposta (Y) é binária, podemos aplicar o Lasso à regressão logística para selecionar variáveis.</p>
+<p>O modelo logístico regularizado com Lasso minimiza a função de perda penalizada:</p>
+<p><span class="math display">\[
+\hat{\beta}^{\text{Lasso}} = \arg \min_{\beta}
+\Bigg\{ - \sum_{i=1}^{n} \Big[ y_i \ln \hat{p}_i + (1 - y_i) \ln (1 - \hat{p}_i) \Big]
++ \lambda \sum_{j=1}^{p} |\beta_j| \Bigg\}
+\]</span></p>
+<p>onde:</p>
+<p><span class="math display">\[
+\hat{p}_i = P(Y_i = 1 \mid X_i) = \frac{1}{1 + \exp[-(\beta_0 + \sum_{j=1}^{p} \beta_j x_{ij})]}.
+\]</span></p>
+</div>
+</section><section id="modelo2" class="slide level2" data-menu-title="Regularização: Elastic Net"><h2></h2>
+<p><span class="slide-title">Regularização Elastic Net</span></p>
+<p><span class="custom-subtitle2">Seleção de variáveis</span></p>
+<hr>
+<div class="body-text-s">
+<p>O Elastic Net é uma técnica de regularização que combina as penalidades Lasso (L1) e Ridge (L2), aproveitando os benefícios de ambas: seleção de variáveis e estabilidade em presença de multicolinearidade.</p>
+<p>O Elastic Net minimiza a seguinte função de perda penalizada:</p>
+<p><span class="math display">\[
+\hat{\boldsymbol{\beta}}^{\text{Elastic Net}} = \arg\min_{\boldsymbol{\beta}} \Bigg\{
+\sum_{i=1}^n \left( y_i - \beta_0 - \sum_{j=1}^p \beta_j x_{ij} \right)^2
++ \lambda \Big[ \alpha \sum_{j=1}^p |\beta_j| + \frac{1}{2}(1 - \alpha) \sum_{j=1}^p \beta_j^2 \Big] \Bigg\}
+\]</span></p>
+<ul>
+<li>
+<span class="math inline">\(y_i\)</span> é a variável resposta;</li>
+<li>
+<span class="math inline">\(x_{ij}\)</span> são os preditores, geralmente padronizados (<span class="math inline">\(tilde{x}_{ij} = \frac{x_{ij} - \bar{x}_j}{s_j}\)</span>) para que a penalização seja aplicada de forma equilibrada;</li>
+<li>
+<span class="math inline">\(\beta_j\)</span> são os coeficientes a serem estimados;</li>
+<li>
+<span class="math inline">\(\lambda \ge 0\)</span> controla a intensidade total da penalização;</li>
+<li>
+<span class="math inline">\(\alpha \in [0,1]\)</span> define a proporção entre as penalidades L1 (Lasso) e L2 (Ridge)</li>
+</ul>
+</div>
+</section><section id="modelo3" class="slide level2" data-menu-title="separação"><h2></h2>
+<p><span class="slide-title">Separação completa/quase-completa</span></p>
+<p><span class="custom-subtitle2">Solução de Firth</span></p>
+<hr>
+<div class="body-text-s">
+<ul>
+<li><p><strong>Separação completa/quase-completa:</strong> ocorre quando uma combinação de preditores separa perfeitamente (ou quase) os dois desfechos</p></li>
+<li><p><strong>Problema:</strong> os coeficientes ML tendem a <span class="math inline">\(\pm \infty\)</span>, erros padrão explodem, tornando inferências não confiáveis.</p></li>
+</ul>
+<div class="sanchez-font">
+<div class="cherry-text">
+<p>Solução de Firth (1993):</p>
+</div>
+</div>
+<p>Penalização da função de verossimilhança:</p>
+<p><span class="math display">\[
+    L^*(\boldsymbol{\beta}) = L(\boldsymbol{\beta}) \left| \mathbf{I}(\boldsymbol{\beta}) \right|^{1/2}
+\]</span></p>
+<ul>
+<li><p>Regulariza a estimação, evitando coeficientes infinitos;</p></li>
+<li><p>Atua como um “prior implícito” puxando estimativas para zero;</p></li>
+<li><p>Produz sempre estimativas finitas, mesmo em separação completa;</p></li>
+<li><p>Reduz viés em amostras pequenas e melhora propriedades assintóticas.</p></li>
+</ul>
+</div>
+</section><section id="tabela_odds" class="slide level2" data-menu-title="Resultados"><h2></h2>
+<p><span class="slide-title">Resultados</span></p>
+<hr>
 
 </section>
-    </div>
+</div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
 
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="index_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="index_files/libs/revealjs/plugin/notes/notes.js"></script><script src="index_files/libs/revealjs/plugin/search/search.js"></script><script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="index_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -210,7 +949,8 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"right","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true,"width":"wide"},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -234,7 +974,7 @@
         slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
-        showSlideNumber: 'print',
+        showSlideNumber: 'all',
 
         // Add the current slide number to the URL hash so that reloading the
         // page/copying the URL will return you to the same slide
@@ -381,7 +1121,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -389,8 +1129,42 @@
           RevealZoom
         ]
       });
-    </script>
-    <script id="quarto-html-after-body" type="application/javascript">
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+    
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+    
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+    
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+    
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -557,6 +1331,6 @@
         }
       });
       </script>
-    
+
 
 </body></html>

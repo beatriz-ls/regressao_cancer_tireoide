@@ -10,6 +10,7 @@ library(janitor)    # para limpeza de nomes
 library(patchwork)  # para organizar gráficos
 library(ggtext)     # para formatação de títulos
 library(reshape2)   # para manipulação de dados longos
+library(ggmosaic)
 
 # Descriptive analysis ########################################################
 
@@ -253,7 +254,36 @@ p_mosaico_patologia <- ggplot(data = dt) +
   theme_minimal()
 
 
-ggsave("plot/bloco3_mosaico.png", p_mosaico_patologia, width = 8, height = 6)
+ggsave("plot/bloco3_patologia_mosaico.png", p_mosaico_patologia, width = 6, height = 4)
+
+
+p_mosaico_radio <- ggplot(data = dt) +
+  geom_mosaic(aes(weight = 1,
+                  x = product(historico_radioterapia),
+                  fill = reocorrencia),
+              na.rm = TRUE) +
+  scale_fill_viridis_d(option = "D", direction = -1) +
+  labs(title = "Distribuição da Histórico de Radioterapia por Recorrência",
+       x = "Histórico de Radioterapia",
+       y = "Proporção") +
+  theme_minimal()
+
+
+ggsave("plot/bloco3_radioterapia_mosaico.png", p_mosaico_radio, width = 6, height = 4)
+
+p_mosaico_estagio <- ggplot(data = dt) +
+  geom_mosaic(aes(weight = 1,
+                  x = product(estagio),
+                  fill = reocorrencia),
+              na.rm = TRUE) +
+  scale_fill_viridis_d(option = "D", direction = -1) +
+  labs(title = "Distribuição do Estagio por Recorrência",
+       x = "Estagio",
+       y = "Proporção") +
+  theme_minimal()
+
+
+ggsave("plot/bloco3_estagio_mosaico.png", p_mosaico_estagio, width = 6, height = 4)
 
 # =========================================
 # BLOCO 4 – TNM, Risco e Resposta (barras)

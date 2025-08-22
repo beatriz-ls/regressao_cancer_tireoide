@@ -1,0 +1,138 @@
+---
+format: 
+  revealjs:
+    slide-number: true
+    code-link: true
+    highlight-style: a11y
+    chalkboard: true
+    # self-contained: true
+    # scrollable: true
+    theme: "bea_slide_theme.scss"
+---
+
+
+##  {#modelo data-menu-title="Modelo Logístico"}
+
+[Modelo Logístico]{.slide-title}
+
+[Definição]{.custom-subtitle2}
+
+<hr>
+
+::: body-text-s
+
+A fórmula geral do modelo logístico é:
+
+$$
+\text{logit}\big(P(Y=1 \mid X_1, X_2, \dots, X_k)\big) = \ln\frac{P(Y=1 \mid X_1, \dots, X_k)}{1 - P(Y=1 \mid X_1, \dots, X_k)} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_k X_k
+$$
+
+Onde:
+
+- $P(Y=1 \mid X_1, X_2, \dots, X_k)$ é a **probabilidade de ocorrência do evento** (Y = 1) dado os preditores $X_1, X_2, \dots, X_k$;
+
+-  $beta_0$ é o intercepto do modelo;
+
+- $beta_1, \dots, \beta_k$ são os coeficientes associados aos preditores $X_1, \dots, X_k$.
+
+
+:::
+
+##  {#modelo1 data-menu-title="Regularização: Lasso"}
+
+[Regularização Lasso]{.slide-title}
+
+[Seleção de variáveis]{.custom-subtitle2}
+
+<hr>
+
+::: body-text-s
+
+Quando a variável resposta \(Y\) é binária, podemos aplicar o Lasso à regressão logística para selecionar variáveis.
+
+
+O modelo logístico regularizado com Lasso minimiza a função de perda penalizada:
+
+$$
+\hat{\beta}^{\text{Lasso}} = \arg \min_{\beta} 
+\Bigg\{ - \sum_{i=1}^{n} \Big[ y_i \ln \hat{p}_i + (1 - y_i) \ln (1 - \hat{p}_i) \Big]
++ \lambda \sum_{j=1}^{p} |\beta_j| \Bigg\}
+$$
+
+onde:
+
+$$
+\hat{p}_i = P(Y_i = 1 \mid X_i) = \frac{1}{1 + \exp[-(\beta_0 + \sum_{j=1}^{p} \beta_j x_{ij})]}.
+$$
+
+:::
+
+##  {#modelo2 data-menu-title="Regularização: Elastic Net"}
+
+[Regularização Elastic Net]{.slide-title}
+
+[Seleção de variáveis]{.custom-subtitle2}
+
+<hr>
+
+::: body-text-s
+
+O Elastic Net é uma técnica de regularização que combina as penalidades Lasso (L1) e Ridge (L2), aproveitando os benefícios de ambas: seleção de variáveis e estabilidade em presença de multicolinearidade.
+
+
+O Elastic Net minimiza a seguinte função de perda penalizada:
+
+$$
+\hat{\boldsymbol{\beta}}^{\text{Elastic Net}} = \arg\min_{\boldsymbol{\beta}} \Bigg\{
+\sum_{i=1}^n \left( y_i - \beta_0 - \sum_{j=1}^p \beta_j x_{ij} \right)^2 
++ \lambda \Big[ \alpha \sum_{j=1}^p |\beta_j| + \frac{1}{2}(1 - \alpha) \sum_{j=1}^p \beta_j^2 \Big] \Bigg\}
+$$
+
+- $y_i$ é a variável resposta;
+- $x_{ij}$ são os preditores, geralmente padronizados ($tilde{x}_{ij} = \frac{x_{ij} - \bar{x}_j}{s_j}$) para que a penalização seja aplicada de forma equilibrada;
+-  $\beta_j$ são os coeficientes a serem estimados;
+- $\lambda \ge 0$ controla a intensidade total da penalização;
+- $\alpha \in [0,1]$ define a proporção entre as penalidades L1 (Lasso) e L2 (Ridge)
+
+:::
+
+##  {#modelo3 data-menu-title="separação"}
+
+[Separação completa/quase-completa]{.slide-title}
+
+[Solução de Firth]{.custom-subtitle2}
+
+<hr>
+
+::: body-text-s
+
+- **Separação completa/quase-completa:** ocorre quando uma combinação de preditores separa perfeitamente (ou quase) os dois desfechos 
+
+- **Problema:** os coeficientes ML tendem a $\pm \infty$, erros padrão explodem, tornando inferências não confiáveis.
+
+:::{.sanchez-font}
+
+:::{.cherry-text}
+
+Solução de Firth (1993):
+
+:::
+
+:::
+
+Penalização da função de verossimilhança:
+
+$$
+    L^*(\boldsymbol{\beta}) = L(\boldsymbol{\beta}) \left| \mathbf{I}(\boldsymbol{\beta}) \right|^{1/2}
+$$
+
+- Regulariza a estimação, evitando coeficientes infinitos;
+
+- Atua como um “prior implícito” puxando estimativas para zero;
+
+- Produz sempre estimativas finitas, mesmo em separação completa;
+
+- Reduz viés em amostras pequenas e melhora propriedades assintóticas.
+
+:::
+
