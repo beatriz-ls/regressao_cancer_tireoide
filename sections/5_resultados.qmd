@@ -17,3 +17,138 @@ format:
 
 <hr>
 
+```{r, echo=FALSE, include= TRUE}
+
+library(htmltools)
+
+# Criando o data.frame
+modelo <- data.frame(
+  Variavel = c(
+    "T1 (ref.)","T2","T3","T4",
+    "N0 (ref.)","N1",
+    "Homem (ref.)","Mulher",
+    "Eutireoide (ref.)","Hipertireoidismo Clínico","Hipertireoidismo Subclínico",
+    "Hipotireoidismo Clínico","Hipotireoidismo Subclínico",
+    "Ausente (ref.)","Presente",
+    "Células de Hurthle (ref.)","Folicular","Micropapilar","Papilar",
+    "Alto (ref.)","Baixo",
+    "Bioquímica incompleta (ref.)","Estrutura incompleta","Excelente","Indeterminado",
+    "I (ref.)","Acima de I"
+  ),
+  OR = c(
+    "1","0.37","0.50","2.79",
+    "1","3.87",
+    "1","0.35",
+    "1","0.25","8.51",
+    "2.72","0.17",
+    "1","0.93",
+    "1","8.27","3.46","6.13",
+    "1","0.26",
+    "1","15.26","0.04","0.19",
+    "1","4.23"
+  ),
+  IC_inf = c(
+    "-","0.034","0.033","0.0023",
+    "-","0.43",
+    "-","0.061",
+    "-","0.006","0.046",
+    "0.015","0.00065",
+    "-","0.14",
+    "-","0.23","0.011","0.30",
+    "-","0.031",
+    "-","2.34","0.0023","0.023",
+    "-","0.49"
+  ),
+  IC_sup = c(
+    "-","7.15","8.61","363.62",
+    "-","36.58",
+    "-","2.09",
+    "-","6.29","502.68",
+    "51.93","5.71",
+    "-","7.01",
+    "-","1155.65","868.63","585.78",
+    "-","1.83",
+    "-","168.82","0.25","0.93",
+    "-","127.03"
+  )
+)
+
+# Dividindo os dados
+# Vamos dividir até "Mulher" (linha 8) na primeira tabela e o restante na segunda
+df1 <- modelo[1:13, ]
+df2 <- modelo[14:nrow(modelo), ]
+
+# Criando as tabelas
+tab1 <- kable(df1, "html", align = c("l","c","c","c"), caption = "Modelo Logístico (Parte 1)") %>%
+  kable_styling(full_width = F, font_size = 13) %>%
+  row_spec(0:nrow(df1), extra_css = "font-size:15px;")
+
+tab2 <- kable(df2, "html", align = c("l","c","c","c"), caption = "Modelo Logístico (Parte 2)") %>%
+  kable_styling(full_width = F, font_size = 13) %>%
+  row_spec(0:nrow(df2), extra_css = "font-size:15px;")
+
+# Exibindo lado a lado
+htmltools::browsable(
+  htmltools::tags$div(
+    style = "display:flex; gap:20px; justify-content:flex-start;",  # espaço entre as tabelas
+    htmltools::HTML(tab1),
+    htmltools::HTML(tab2)
+  )
+)
+```
+
+##  {#barra_coef data-menu-title="Resultados"}
+
+[Resultados]{.slide-title}
+
+
+<hr>
+
+![](plot/barras_coef.png)
+
+
+
+##  {#matriz data-menu-title="Resultados"}
+
+[Resultados]{.slide-title}
+
+
+<hr>
+
+
+![](plot/matriz.png)
+
+
+##  {#conclusao data-menu-title="Conclusão"}
+
+[Conclusão]{.slide-title}
+
+
+<hr>
+
+- Modelo estatisticamente significativo (Likelihood ratio test = 237.2257, $p < 0.001$).
+
+- **Variáveis preditoras significativas:**
+
+    - **Estrutura incompleta:** aumento do risco de recorrência ($\beta$ = 2.725, p = 0.003).
+
+    - **Excelente:** efeito protetor, menor risco de recorrência ($\beta$ = -3.227, p = 0.0004).
+
+    - **Indeterminado:** efeito protetor ($\beta$ = -1.686, p = 0.041).
+
+ - **Outras variáveis clínicas e patológicas:** Não significativas após ajuste.
+
+- **Método de Firth:** Adequado para lidar com separação completa ou quase-completa, garantindo estimativas estáveis e finitas.
+
+- **Implicações clínicas:** A resposta ao tratamento pode ser um marcador prognóstico central, integrando informações de múltiplos fatores em uma única medida.
+
+- **Sugestão para estudos futuros:** Investigar interações entre a resposta ao tratamento e outros fatores prognósticos em amostras maiores.
+
+---
+
+
+##  {#fim data-menu-title="Let's start styling" background="#4F6815"}
+
+<div class="page-center">
+<div class="custom-subtitle"> Fim! </div>
+</div>

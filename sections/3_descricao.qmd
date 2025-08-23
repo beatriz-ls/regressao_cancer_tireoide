@@ -275,7 +275,10 @@ Distribuição de reocorrênica para as demais váriaveis
 
 :::
 
+
 ![](plot/bloco4_barras.png)
+
+
 
 
 ##  {#descricao8 data-menu-title="Descrição da Coorte"}
@@ -343,5 +346,7 @@ kable(reocorrencia, "html", escape = FALSE, align = c("l","c","c","c"), caption 
 
 
 ```
+
+
 
 

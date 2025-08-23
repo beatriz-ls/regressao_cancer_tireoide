@@ -9,7 +9,7 @@ $font-family-serif: 'Sanchez', serif;
 $font-family-monospace: 'Roboto Mono', monospace;
 
 // nova paleta de cores
-$butter: #FFEDAB;
+$butter:#E6C55A;
 $cherry: #75070c;
 $olive: #4F6815;
 $oat: #F0E6DA;
@@ -67,7 +67,7 @@ hr {
 // custom slide title
 .custom-title {
   font-family: $font-family-serif;
-  color: $butter;
+  color: $oat;
   font-size: 2.7em;
   left: 20px;
 }
@@ -75,7 +75,7 @@ hr {
 // cover slide subtitles
 .custom-subtitle {
   font-family: $font-family-sans-serif;
-  color: $butter;
+  color: $oat;
   font-size: 2.2em;
   left: 20px;
 }
@@ -89,7 +89,7 @@ hr {
 
 .custom-subtitle3 {
   font-family: $font-family-sans-serif;
-  color: $butter;
+  color: $oat;
   font-size: 1.1em;
   left: 20px;
 }
@@ -276,4 +276,13 @@ hr {
 pre.sourceCode {
   font-size: 12px;
 }
+
+.reveal .slides img {
+  display: block;       // necessário para centralizar
+  margin-left: auto;
+  margin-right: auto;   // centraliza horizontalmente
+  max-width: 90%;       // opcional: limita largura
+  height: auto;         // mantém proporção
+}
+
 
